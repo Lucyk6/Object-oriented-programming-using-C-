@@ -130,11 +130,167 @@ using namespace std;
 //
 //    return 0;
 //}
-class Shape {
+//6
+//class Shape {
+//public:
+//    virtual double area() const = 0;
+//
+//    virtual ~Shape() = default;
+//};
+//
+//class Rectangle : public Shape {
+//private:
+//    double width;
+//    double height;
+//
+//public:
+//    Rectangle(double w, double h) : width(w), height(h) {}
+//
+//    
+//    double area() const override {
+//        return width * height;
+//    }
+//};
+//
+//
+//class Circle : public Shape {
+//private:
+//    double radius;
+//
+//public:
+//  
+//    Circle(double r) : radius(r) {}
+//
+//
+//    double area() const override {
+//        return 3.14 * radius * radius; 
+//    }
+//};
+//
+//int main() {
+//
+//    Rectangle rect(5.0, 3.0);  
+//    Circle circle(4.0);          
+//
+//   
+//    Shape* shapes[] = { &rect, &circle };
+//
+//    std::cout << "Площади фигур:\n";
+//    for (Shape* shape : shapes) {
+//        std::cout << shape->area() << "\n";
+//    }
+//
+//    return 0;
+//}
+//7
+//class Point {
+//public:
+//	double  x;
+//	double  y;
+//
+//      Point() : x(0.0), y(0.0) {}
+// };
+//
+//int main() {
+//
+//        Point p;
+//
+//        std::cout << "Cordinates:\n";
+//        std::cout << "X = " << p.x << ", Y = " << p.y << "\n";
+//
+//        return 0;
+// }
+//8
+//class Point {
+//public:
+//	double x;
+//	double y;
+//
+//	Point(double x1, double y1) {
+//
+//		x = x1;
+//
+//	    y = y1;
+//
+//	}
+//
+//    void displayinfo() {
+//
+//		cout << "Cordinates: " << endl;
+//
+//	}
+//};
+//int Main() {
+//
+//	Point p1(5.00, 10.00);
+//	p1.displayinfo();
+//	return 0;
+//
+//}
+
+//9 
+//class BankAccount {
+//
+//private:
+//	double balance;
+//    string  accountNumber;
+//public:
+//	BankAccount(const string& accNum, double initialBalance = 0.0)
+//		: accountNumber(accNum), balance(initialBalance) {
+//	}
+//	void deposit(int amount) {
+//		if (amount > 0) {
+//			balance += amount;
+//			cout << "Add " << amount << " succsess.\n";
+//		}
+//		else {
+//		    cout << "Error.\n";
+//		}
+//	}
+//	void withdraw(int amount)
+//	{
+//		if (amount <= 0) {
+//			std::cout << "Error, the sum has to be more than 0!\n";
+//			return;
+//		}
+//		if (balance >= amount) {
+//			balance -= amount;
+//			std::cout << "minus  " << amount << " ok.\n";
+//		}
+//		else {
+//			std::cout << "error, you don't have enough money \n";
+//			std::cout << "your money : " << balance << ", requested amount: " << amount << "\n";
+//		}
+//	}
+//
+//	
+//	void display() const {
+//		std::cout << "Account number: " << accountNumber << "\n";
+//		std::cout << "Balance: " << balance << "\n";
+//	}
+//};
+//int main() {
+//
+//	BankAccount account("Agj12345", 1000.0);
+//
+//
+//	std::cout << "Initial account status:\n";
+//	account.display();
+//
+//
+//
+//	account.deposit(5000);      
+//	account.withdraw(200);    
+//	account.withdraw(1500); 
+//	account.deposit(-100);  
+//
+//	std::cout << "\nFinal account balance:\n";
+//	account.display();
+//
+//	return 0;
+//}
+//	
+//`10
 
 
 
-
-
-
-};
