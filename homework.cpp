@@ -292,5 +292,221 @@ using namespace std;
 //	
 //`10
 
+/*class Student {
+private:
+    string name;
+public:
+
+    Student(const string& studentName) : name(studentName) {}
+
+ 
+   string getName() const {
+        return name;
+    }
+
+  
+    void setName(const string& newName) {
+        name = newName;
+    }
+};
+
+void changeStudentName(Student& student, const string& newName) {
+    student.setName(newName);
+}
+
+int main() {
+    Student student1("lusiine");
+    Student student2("lizaa");
+
+    cout << "Name of first student: " << student1.getName() << endl;
+    cout << "Name of second student : " << student2.getName() <<endl;
+
+    changeStudentName(student1, "Liza ");
+
+    changeStudentName(student2, "Lusine ");
+
+ 
+    cout << "first: " << student1.getName() <<endl;
+    cout << "scond : " << student2.getName() << endl;
+
+    return 0;
+}
+//11
+#include <iostream>
+#include <string>
+
+class Animal {
+protected:
+    std::string name;
+public:
+    Animal(const std::string& animalName) : name(animalName) {}
+    std::string getName() const { return name; }
+};
+
+class Dog : public Animal {
+private:
+    std::string breed;
+public:
+    Dog(const std::string& dogName, const std::string& dogBreed)
+        : Animal(dogName), breed(dogBreed) {
+    }
+
+    std::string getBreed() const { return breed; }
+};
+
+int main() {
+    Dog myDog("murka", "doberman");
+    std::cout << "Name: " << myDog.getName() << std::endl;
+    std::cout << "poroda: " << myDog.getBreed() << std::endl;
+    return 0;
+}
+//12
+#include <iostream>
+
+class Rectangle {
+private:
+    double length;
+    double width;
+public:
+    Rectangle(double l, double w) : length(l), width(w) {}
+
+    double area() const {
+        return length * width;
+    }
+
+    double perimeter() const {
+        return 2 * (length + width);
+    }
+};
+
+int main() {
+    Rectangle rect(5.0, 3.0);
+    std::cout << "S: " << rect.area() << std::endl;
+    std::cout << "P: " << rect.perimeter() << std::endl;
+    return 0;
+}
+//13
+#include <iostream>
+
+class Counter {
+private:
+    int count;
+public:
+    Counter() : count(0) {}
+
+    void increment() {
+        count++;
+    }
+
+    int getCount() const {
+        return count;
+    }
+};
+
+int main() {
+    Counter myCounter;
+    myCounter.increment();
+    myCounter.increment();
+    myCounter.increment();
+    std::cout << "znachenie : " << myCounter.getCount() << std::endl;
+    return 0;
+}
+//14
+#include <iostream>
+
+class Vehicle {
+public:
+    virtual void fuelEfficiency() const {
+        std::cout << "Fuel efficiency of the base vehicle" << std::endl;
+    }
+    virtual ~Vehicle() = default; 
+};
+
+class Car : public Vehicle {
+public:
+    void fuelEfficiency() const override {
+        std::cout << "Vehicle efficiency: 8 l/100 km" << std::endl;
+    }
+};
+
+class Truck : public Vehicle {
+public:
+    void fuelEfficiency() const override {
+        std::cout << "Truck efficiency: 25 l/100 km" << std::endl;
+    }
+};
+
+int main() {
+    Vehicle* vehicles[3];
+    vehicles[0] = new Car();
+    vehicles[1] = new Truck();
+    vehicles[2] = new Vehicle();
+
+    for (int i = 0; i < 3; ++i) {
+        vehicles[i]->fuelEfficiency();
+    }
+
+
+    for (int i = 0; i < 3; ++i) {
+        delete vehicles[i];
+    }
+    return 0;
+}
+//15
+#include <iostream>
+#include <vector>
+#include <string>
+
+class Book {
+private:
+    std::string title;
+    std::string author;
+public:
+    Book(const std::string& bookTitle, const std::string& bookAuthor)
+        : title(bookTitle), author(bookAuthor) {
+    }
+
+    void display() const {
+        std::cout << "\"" << title << "\" — " << author << std::endl;
+    }
+
+    friend class Library; 
+};
+
+class Library {
+private:
+    std::vector<Book> books;
+public:
+    void addBook(const Book& book) {
+        books.push_back(book);
+    }
+
+    void displayAllBooks() const {
+        if (books.empty()) {
+            std::cout << "clean liberary" << std::endl;
+            return;
+        }
+        std::cout << "List of books in the library:" << std::endl;
+        for (const auto& book : books) {
+            book.display();
+        }
+    }
+};
+
+int main() {
+    Library myLibrary;
+    Book book1("War and Peace", "Tolstoy");
+    Book book2("Crime and punishment", "Fyodor Dostoevsky");
+    Book book3("The Master and Margarita", "Mikhail Bulgakov");
+
+    myLibrary.addBook(book1);
+    myLibrary.addBook(book2);
+    myLibrary.addBook(book3);
+
+    myLibrary.displayAllBooks();
+    return 0;
+}
+*/
+
 
 
