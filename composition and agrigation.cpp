@@ -152,3 +152,121 @@ using namespace std;
 //    myCar.showWheels();
 //    return 0;
 //}
+//6)
+//#include <vector>
+//#include <string>
+//using namespace std;
+//
+//class Employee {
+//public:
+//    Employee(const string& name) : empName(name) {}
+//    void show() const { cout << "Employee: " << empName << endl; }
+//private:
+//    string empName;
+//};
+//
+//class Company {
+//public:
+//    void addEmployee(Employee* e) { employees.push_back(e); }
+//    void showEmployees() const {
+//        for (const auto& e : employees) {
+//            e->show();
+//        }
+//    }
+//private:
+//    vector<Employee*> employees; 
+//};
+//int main() {
+//  
+//    Employee* emp1 = new Employee("liza");
+//    Employee* emp2 = new Employee("max");
+//    Employee* emp3 = new Employee("ilya");
+//    Company myCompany;
+//
+//    myCompany.addEmployee(emp1);
+//    myCompany.addEmployee(emp2);
+//    myCompany.addEmployee(emp3);
+//
+//    myCompany.showEmployees();
+//
+//    delete emp1;
+//    delete emp2;
+//    delete emp3;
+//
+//    return 0;
+//}
+//7)
+//#include <string>
+//using namespace std;
+//
+//class Keyboard {
+//public:
+//    void pressKey() { cout << "Key pressed." << endl; }
+//};
+//
+//class Laptop {
+//public:
+//    Laptop() : keyboard(new Keyboard) {}
+//    ~Laptop() { delete keyboard; }
+//
+//    void useKeyboard() { keyboard->pressKey(); }
+//private:
+//    Keyboard* keyboard;
+//};
+//int main() {
+//
+//    Laptop myLaptop;
+//
+//    myLaptop.useKeyboard();
+//
+//    return 0;
+//}
+//8)
+//#include <iostream>
+//#include <vector>
+//#include <string>
+//using namespace std;
+//
+//class Student {
+//public:
+//    Student(const string& name) : studentName(name) {}
+//    void show() const { cout << "Student: " << studentName << endl; }
+//private:
+//    string studentName;
+//};
+//
+//class Course {
+//public:
+//    void addStudent(Student* s) { students.push_back(s); }
+//    void showStudents() const {
+//        for (const auto& s : students) {
+//            s->show();
+//        }
+//    }
+//private:
+//    vector<Student*> students; 
+//};
+//int main() {
+//
+//    Student* s1 = new Student("anna");
+//    Student* s2 = new Student("liza");
+//    Student* s3 = new Student("ao");
+//
+//
+//    Course myCourse;
+//
+//
+//    myCourse.addStudent(s1);
+//    myCourse.addStudent(s2);
+//    myCourse.addStudent(s3);
+//
+//
+//    myCourse.showStudents();
+//
+//    delete s1;
+//    delete s2;
+//    delete s3;
+//
+//    return 0;
+//}
+//9)
